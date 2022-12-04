@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  
-  get 'recipes/index'
-  get 'recipes/create'
+  # list and create recipes routes
+  get '/recipes', to: 'recipes#index'
+  post '/recipes', to: 'recipes#create'
 
   # routes for login and logout in sessions
   post '/login', to: 'sessions#create'
